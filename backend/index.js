@@ -36,6 +36,11 @@ app.use("/api/users",userRoute)
 app.use("/api/posts",postRoute)
 app.use("/api/comments",commentRoute)
 
+// check
+app.get("/",(req,res) => {
+    res.json("Heyy");
+})
+
 //image upload
 const storage=multer.diskStorage({
     destination:(req,file,fn)=>{
