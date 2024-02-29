@@ -20,7 +20,7 @@ const Home = () => {
   const fetchPosts = async () => {
     setLoader(true)
     try {
-      const res = await axios.get(URL + "/api/posts/" + search)
+      const res = await axios.get(URL + "/posts/" + search)
       setPosts(res.data)
       console.log(posts)
       if (res.data.length === 0) {
